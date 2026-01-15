@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ResearchKit/ResearchKit.h>
 
 @interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
 

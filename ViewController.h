@@ -8,6 +8,6 @@
 #import <UIKit/UIKit.h>
 #import <ResearchKit/ResearchKit.h>
 
-@interface RootViewController : UIViewController <ORKTaskViewControllerDelegate>
+@interface RootViewController : UIViewController <UIPageViewControllerDelegate>
 
 @end
