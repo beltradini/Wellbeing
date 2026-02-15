@@ -5,7 +5,7 @@
 //  Created by Alejandro Beltrán on 1/12/26.
 //
 
-#import <ResearchKit/ResearchKit.h>
+#import "ResearchKitSupport.h"
 
 @interface ConsentTaskBuilder : NSObject
 
