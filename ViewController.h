@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ResearchKit/ResearchKit.h>
+#import "ResearchKitSupport.h"
 
 @interface RootViewController : UIViewController <UIPageViewControllerDelegate>
 
