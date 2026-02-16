@@ -15,17 +15,25 @@
     [super viewDidLoad];
     self.title = @"Wellbeing Study";
     self.view.backgroundColor = UIColor.systemBackgroundColor;
-     
-    UIBarButtonItem *startButton = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStylePlain target:self action:@selector(startColumn)];
+
+    UIBarButtonItem *startButton = [[UIBarButtonItem alloc] initWithTitle:@"Start"
+                                                                     style:UIBarButtonItemStylePlain
+                                                                    target:self
+                                                                    action:@selector(startConsent)];
+    self.navigationItem.rightBarButtonItem = startButton;
 }
 
 - (void)startConsent {
     ORKOrderedTask *task = [ConsentTaskBuilder buildConsentTask];
-    ORKTaskViewController *vc =
-        [[ORKTaskViewController alloc] initWithTask:task taskRunUUID:nil];
-
+    ORKTaskViewController *vc = [[ORKTaskViewController alloc] initWithTask:task taskRunUUID:nil];
     vc.delegate = self;
     [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)taskViewController:(ORKTaskViewController *)taskViewController
+      didFinishWithReason:(ORKTaskViewControllerFinishReason)reason
+                    error:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
