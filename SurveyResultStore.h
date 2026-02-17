@@ -8,5 +8,8 @@
 #import "SurveyResultModel.h"
 
 @interface SurveyResultStore : NSObject
+
 + (void)saveResult:(SurveyResultModel *)result;
++ (NSArray<SurveyResultModel *> *)loadResults;
+
 @end

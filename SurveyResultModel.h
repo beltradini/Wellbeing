@@ -8,7 +8,13 @@
 #import <Foundation/Foundation.h>
 
 @interface SurveyResultModel : NSObject
-@property NSNumber *mood;
-@property NSNumber *sleepHours;
-@property NSNumber *energy;
+
+- (instancetype)initWithMood:(NSNumber *)mood
+				  sleepHours:(NSNumber *)sleepHours
+					  energy:(NSNumber *)energy;
+
+@property (nonatomic, strong) NSNumber *mood;
+@property (nonatomic, strong) NSNumber *sleepHours;
+@property (nonatomic, strong) NSNumber *energy;
+
 @end
